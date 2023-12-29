@@ -1,6 +1,7 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom"
 import Home from './page/Home'
 import About from './page/About'
+import NotFound from "./page/NotFound"
 import RootLayout from "./layout/RootLayout"
 import HelpLayout from "./layout/HelpLayout"
 import Faq from "./page/help/Faq"
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
         <Route path="faq" element={<Faq />}></Route>
         <Route path="contact" element={<Contact />}></Route>
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 )
